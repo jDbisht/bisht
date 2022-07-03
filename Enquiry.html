@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company Page</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+       body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  
+
+
+
+
+
+
+
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  #myNavbar > ul > li > a {
+    color: #f5f5f5;
+    background-color: inherit;
+}
+
+#myNavbar > ul > li {
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+#myNavbar > ul:not(.social-list) > li:not(.active):hover {
+    background-color: #333;
+}
+
+#myNavbar > ul > li.active a {
+    background-color: #333;
+}
+
+ ul.dropdown-menu {
+    background-color: #f4511e;
+    
+}
+
+ul.multi-columns {
+    columns: 1;
+}
+
+ul.nav li.dropdown > ul.dropdown-menu li a {
+    color: #f5f5f5;
+}
+
+ul.dropdown-menu > li > a {
+    transition: background-color 0.5s ease;
+}
+
+    ul.dropdown-menu > li > a:hover {
+        background-color: #333;
+    }
+
+.dropdown-menu .dropdown-header {
+    font-weight: bold;
+    color: #C0C0C0;
+    text-decoration: underline;
+}
+
+
+   #footer {
+  background: #000;
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  background: #111;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 34px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 10px;
+  line-height: 1;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-left: 4px solid #f4511e;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial, sans-serif;
+  color: #eee;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #eee;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #f4511e;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top h4::before, #footer .footer-top h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+#footer .footer-top h4::before {
+  right: 0;
+  background: #555;
+}
+
+#footer .footer-top h4::after {
+  background: #f4511e;;
+  width: 60px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 8px;
+  color: #ddd;
+}
+
+#footer .footer-top .footer-links ul li {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #eee;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #f4511e;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: #f4511e;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: #13a456;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ddd;
+    }
+}
+
+
+/* enquiry form section*/
+
+.enquiryform-control {
+    background-color: #f5f5f5;
+}
+
+    .enquiryform-control p {
+        padding: 10px;
+    }
+
+    .enquiryform-control input[type="text"], .enquiryform-control input[type="email"], .enquiryform-control textarea, .enquiryform-control select {
+        border: 0px;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        background-color: #000;
+        text-align: center;
+        width: 90%;
+        letter-spacing: 1px;
+    }
+
+    .enquiryform-control select {
+        border: 1px solid #ccc;
+        height: 35px;
+        text-align: left;
+    }
+
+    .enquiryform-control input[type="submit"] {
+        font-family: Calibri;
+        font-size: 18px;
+        background-color: transparent;
+        width: 90%;
+        border: 1px solid #f5f5f5;
+    }
+
+        .enquiryform-control input[type="submit"]:hover {
+            background-color: #eee;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+    .enquiryform-control textarea {
+        resize: vertical;
+        max-height: 100px;
+        height: 50px;
+        min-height: 50px;
+    }
+
+    .enquiryform-control input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .enquiryform-control input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+        border-bottom: 2px solid #f5f5f5;
+    }
+
+    .prod-enquiry-icon {
+    margin: 0px 0px 0px 234px;
+    border: 1px solid #fff;
+    display: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.products li:hover .prod-enquiry-icon {
+    z-index: 10;
+    display: block;
+    position: absolute;
+}
+
+.prod-img-block {
+    width: 275px;
+    height: 210px;
+    position: relative;
+}
+
+    .prod-img-block img {
+        padding: 5px;
+        border: 0 none;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .prod-img-block:hover ~ .prod-desc-block {
+        display: block;
+        z-index: 10;
+        position: absolute;
+    }
+
+.prod-desc-block {
+    min-width: 275px;
+    width: auto;
+    max-width: 700px;
+    height: auto;
+    display: none;
+    text-align: justify;
+    background-color: #333 !important;
+    color: #f5f5f5;
+}
+
+.name-block {
+    width: 275px;
+    height: 55px;
+    overflow: hidden;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.category-sidebar ul li {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 5px;
+    display:table;
+    width:100%;
+}
+
+    .category-sidebar ul li a {
+        color: #f5f5f5;
+        display:table-cell;
+    }
+
+    .category-sidebar ul li img {
+        display:table-cell;
+        margin-bottom:-5px;
+    }
+
+@media all and (max-width:1000px) {
+    .category-sidebar {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+        .category-sidebar ul li {
+            display: inline-block;
+            padding: 5px;
+        }
+}
+
+@media all and (min-width:1000px) and (max-width:2000px) {
+    .category-sidebar {
+        border-right: 1px solid #f5f5f5;
+    }
+
+        .category-sidebar ul {
+            display: table-row;
+        }
+}
+
+.category-sidebar ul li:hover {
+    background-color:#000;
+}
+
+.enquiry-main, .about-main, .contact-main {
+    height: auto;
+    background: url('../images/banners/enquiry-form-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-main {
+    background: url('../images/banners/about-main-bg.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact-main {
+    background: url('../images/banners/contact-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .enquiry-main .left-block, .about-main .about-con, .contact-main .contact-con {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: #000;
+        color: #f5f5f5;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Alegreya Sans', sans-serif;
+        letter-spacing: 1px;
+        padding: 50px 20px;
+        opacity: 0.9;
+    }
+
+    .about-main .about-con, .contact-main .contact-con {
+        padding: 0px 20px;
+        font-size: 18px;
+        text-align: center;
+        font-family: Calibri;
+    }
+
+    .about-main .about-heading, .contact-main .contact-heading {
+        background-color: #666;
+        padding: 5px 0px;
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+.img-icon {
+    margin-top: -80px;
+}
+
+.img-icon-about {
+    text-align: center;
+    margin-top: -55px;
+}
+
+.enquiry-main .right-block {
+    color: #f5f5f5;
+    background-color: #000;
+    opacity: 0.9;
+    font-family: 'Alegreya Sans', sans-serif;
+    padding: 30px 20px;
+}
+
+select:disabled {
+    background-color: #666;
+}
+
+ 
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">INFINIX</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home">
+                    </span>&nbsp;HOME</a></li>
+        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>
+                        &nbsp;ABOUT US</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list-alt">
+                    </span>&nbsp;PRODUCT
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-columns">
+            <li><a href="#">AIR FRESHNERS</a></li>
+            <li><a href="#">CLEANING TOOLS AND EQUIPMENTS</a></li>
+            <li><a href="#">CLEANING TROLLEYS</a></li> 
+            <li><a href="#">CONSUMABLES</a></li>
+            <li><a href="#">CURRENCY CHECK MACHINES</a></li>
+            <li><a href="#">DISPLAY PRODUCTS AND SIGNAGES</a></li>
+            <li><a href="#">DISPOSABLES</a></li>
+            <li><a href="#">HAND DRYERS</a></li> 
+            <li><a href="#">HYGIENE STATION</a></li>
+            <li><a href="#">INSECT KILLERS</a></li>
+            <li><a href="#">MATINGS</a></li>
+            <li><a href="#">MULTI PURPOSE TROLLEY</a></li>
+            <li><a href="#">MULTI UTILITY PRODUCTS</a></li> 
+            <li><a href="#">PAPER NAPKIN DISPENSERS</a></li>
+            <li><a href="#">PAPER PRODUCTS</a></li>
+            <li><a href="#">PLASTIC DUSTBINS</a></li>
+            <li><a href="#">SHOE CARE</a></li>
+            <li><a href="#">SOAP DISPENSERS</a></li>
+            <li><a href="#">STAINLESS STEEL DUSTBINS</a></li>
+            <li><a href="#">TRAFFIC AND SAFETY PRODUCTS</a></li>
+          </ul>
+        </li>
+        <li><a href="Enquiry.html"><span class="glyphicon glyphicon-comment">
+                    </span>&nbsp;ENQUIRY</a></li>
+        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope">
+                    </span>&nbsp;CONTACT US</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <div class="container-fluid">
+        
+    <div class="row row-padding enquiry-main">
+        <div class="col-md-12" style="padding: 50px 10px;">
+            <div class="row">
+                <div class="col-md-4 left-block">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="img-icon">
+                                <img src="C:\Users\Pratap\Desktop\enquiry-big-icon.png" /></p>
+                            <p>
+                                Whether you have a general query or you have a query related to a product We are
+                                always there to listen to your queries.<hr />
+                                <small><i class="underline">care@ecolavishmarketing.com</i></small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-7 right-block enquiryform-control">
+                <p>
+                                <span id="ctl00_ContentPlaceHolder2_lblMsg"></span></p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                            <p>
+                                <table id="ctl00_ContentPlaceHolder2_rdEnquiryType" title="Select General Query if you don't have any product specific query" border="0" style="width:100%;">
+  <tr>
+    <td><input id="ctl00_ContentPlaceHolder2_rdEnquiryType_0" type="radio" name="ctl00$ContentPlaceHolder2$rdEnquiryType" value="1" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder2$rdEnquiryType$0\',\'\')', 0)" /><label for="ctl00_ContentPlaceHolder2_rdEnquiryType_0">Product Enquiry</label></td><td><input id="ctl00_ContentPlaceHolder2_rdEnquiryType_1" type="radio" name="ctl00$ContentPlaceHolder2$rdEnquiryType" value="2" checked="checked" /><label for="ctl00_ContentPlaceHolder2_rdEnquiryType_1">General Enquiry</label></td>
+  </tr>
+</table>
+                                
+                            </p>
+                            <p>
+                                <select name="ctl00$ContentPlaceHolder2$ddlCategory" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder2$ddlCategory\',\'\')', 0)" id="ctl00_ContentPlaceHolder2_ddlCategory" disabled="disabled">
+  <option selected="selected" value="">Select Product Category</option>
+  <option value="1061">AIR CURTAINS</option>
+  <option value="1069">AIR FRESHNERS</option>
+  <option value="16">CLEANING TOOLS AND EQUIPMENTS</option>
+  <option value="1070">CLEANING TROLLEYS</option>
+  <option value="1062">CONSUMABLES</option>
+  <option value="1072">CURRENCY CHECK MACHINES </option>
+  <option value="10">DISPLAY PRODUCTS AND SIGNAGES</option>
+  <option value="1063">DISPOSABLES</option>
+  <option value="15">HAND DRYERS</option>
+  <option value="7">HYGIENE STATION</option>
+  <option value="1065">INSECT KILLERS</option>
+  <option value="18">MATINGS</option>
+  <option value="8">MULTI PURPOSE TROLLEY</option>
+  <option value="1066">MULTI UTILITY PRODUCTS</option>
+  <option value="6">PAPER NAPKIN DISPENSERS</option>
+  <option value="1071">PAPER PRODUCTS </option>
+  <option value="1067">PLASTIC DUSTBINS</option>
+  <option value="1068">SHOE CARE</option>
+  <option value="14">SOAP DISPENSERS</option>
+  <option value="13">STAINLESS STEEL DUSTBINS</option>
+  <option value="9">TRAFFIC AND SAFETY PRODUCTS</option>
+
+</select>
+                                <span id="ctl00_ContentPlaceHolder2_rfvCategory" title="Select Category to raise a product enquiry" style="color:Red;display:none;"><img src="images/questionmark.png" /></span>
+                            </p>
+                            <p>
+                                <select name="ctl00$ContentPlaceHolder2$ddlProducts" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder2$ddlProducts\',\'\')', 0)" id="ctl00_ContentPlaceHolder2_ddlProducts" disabled="disabled">
+
+</select>
+                                <span id="ctl00_ContentPlaceHolder2_rfvProduct" title="Select Product to raise a product enquiry" style="color:Red;display:none;"><img src="images/questionmark.png" /></span>
+                            </p>
+                            <p class='prod-img-block'><img id="ctl00_ContentPlaceHolder2_imgproduct" class="img-responsive" style="border:none; outline:none" /></p>
+                        </div>
+                        <div class="col-md-6">
+                        <p>
+                                <input name="ctl00$ContentPlaceHolder2$txtName" type="text" id="ctl00_ContentPlaceHolder2_txtName" placeholder="Name" />
+                                <span id="ctl00_ContentPlaceHolder2_rfv_Name" title="Give your name" style="color:Red;display:none;"><img src="images/questionmark.png" /></span>
+                                <span id="ctl00_ContentPlaceHolder2_rev_Name" title="You have typed some invalid characters" style="color:Red;font-size:Small;display:none;"><img src="images/wrong.png" /></span>
+                            </p>
+                            <p>
+                                <input name="ctl00$ContentPlaceHolder2$txtEmail" type="text" id="ctl00_ContentPlaceHolder2_txtEmail" placeholder="Email" />
+                                <span id="ctl00_ContentPlaceHolder2_rfv_Email" title="Give your Email Id. We do not share your details with others." style="color:Red;display:none;"><img src="images/questionmark.png" /></span>
+                                <span id="ctl00_ContentPlaceHolder2_rev_Email" title="Enter a valid Email address" style="color:Red;font-size:Small;display:none;"><img src="images/wrong.png" /></span>
+                            </p>
+                            <p>
+                                <input name="ctl00$ContentPlaceHolder2$txtContact" type="text" id="ctl00_ContentPlaceHolder2_txtContact" placeholder="Mobile" />
+                                <span id="ctl00_ContentPlaceHolder2_rev_Mobile" title="Enter only 10 digit mobile number" style="color:Red;font-size:Small;display:none;"><img src="images/wrong.png" /></span>
+                            </p>
+                            <p>
+                                <textarea name="ctl00$ContentPlaceHolder2$txtMessage" rows="2" cols="20" id="ctl00_ContentPlaceHolder2_txtMessage" placeholder="Query"></textarea>
+                                <span id="ctl00_ContentPlaceHolder2_revMessage" title="You have typed some invalid characters" style="color:Red;font-size:Small;display:none;"><img src="images/wrong.png" /></span>
+                            </p>
+                            <p>
+                                <input type="submit" name="ctl00$ContentPlaceHolder2$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder2$btnSubmit&quot;, &quot;&quot;, true, &quot;off&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder2_btnSubmit" class="btn btn-primary" /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+                  <div class="col-lg-3 col-md-6 footer-info">
+            <h3>INFINIX</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+               <li><i class="ion-ios-arrow-right"></i> <a href="project.html">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="about.html">About Us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Product</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="Enquiry.html">Enquiry</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+          
+            <p class="copyright text-muted">Copyright &copy; INFINIX  2019</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

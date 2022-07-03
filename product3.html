@@ -1,0 +1,1131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company Page</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    .container-fluid{
+      background-color: #676767;
+    }
+       body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h1{
+    color: black;
+
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  
+
+
+
+
+
+
+
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  #myNavbar > ul > li > a {
+    color: #f5f5f5;
+    background-color: inherit;
+}
+
+#myNavbar > ul > li {
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+#myNavbar > ul:not(.social-list) > li:not(.active):hover {
+    background-color: #333;
+}
+
+#myNavbar > ul > li.active a {
+    background-color: #333;
+}
+
+ ul.dropdown-menu {
+    background-color: #f4511e;
+    
+}
+
+ul.multi-columns {
+    columns: 1;
+}
+
+ul.nav li.dropdown > ul.dropdown-menu li a {
+    color: #f5f5f5;
+}
+
+ul.dropdown-menu > li > a {
+    transition: background-color 0.5s ease;
+}
+
+    ul.dropdown-menu > li > a:hover {
+        background-color: #333;
+    }
+
+.dropdown-menu .dropdown-header {
+    font-weight: bold;
+    color: #C0C0C0;
+    text-decoration: underline;
+}
+
+
+   #footer {
+  background: #000;
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  background: #111;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 34px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 10px;
+  line-height: 1;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-left: 4px solid #f4511e;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial, sans-serif;
+  color: #eee;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #eee;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #f4511e;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top h4::before, #footer .footer-top h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+#footer .footer-top h4::before {
+  right: 0;
+  background: #555;
+}
+
+#footer .footer-top h4::after {
+  background: #f4511e;;
+  width: 60px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 8px;
+  color: #ddd;
+}
+
+#footer .footer-top .footer-links ul li {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #eee;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #f4511e;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: #f4511e;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: #13a456;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ddd;
+    }
+}
+
+
+
+------------------------------------------------------
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #5B5B5B;
+    background-color: #F8F8F8;
+}
+
+.row-padding {
+    padding: 20px 20px;
+}
+
+.row-padding-tb-sm /*tb-top bottom; sm-small padding*/ {
+    padding: 5px 0px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.sitename {
+    background: url('../images/header-bg.jpg') center center;
+    font-family: Times New Roman;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 10px;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+
+#myNavbar > ul > li > a {
+    color: #f5f5f5;
+    background-color: inherit;
+}
+
+#myNavbar > ul > li {
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+#myNavbar > ul:not(.social-list) > li:not(.active):hover {
+    background-color: #333;
+}
+
+#myNavbar > ul > li.active a {
+    background-color: #333;
+}
+
+.footer {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+    .footer p {
+        font-size: 18px;
+    }
+
+    .footer ul {
+        list-style-type: none;
+        line-height: 25px;
+    }
+
+        .footer ul li a {
+            color: #67B7E0;
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer ul li {
+            border-bottom: 1px solid #333;
+            padding: 5px 3px;
+            transition: all 0.5s ease;
+        }
+
+            .footer ul li:hover {
+                text-decoration: none;
+                background-color: #333;
+            }
+
+.footer-copyright {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+}
+
+    .social-icon:hover {
+        -webkit-animation: mymove 2s 1;
+        animation: mymove 1s 1;
+    }
+
+@-webkit-keyframes mymove {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+.social-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+    .social-list li {
+        float: left;
+    }
+
+        .social-list li a {
+            display: block;
+            padding: 7px 5px;
+        }
+
+.row-gap {
+    margin: 3px 0px 10px 0px;
+}
+/*.row-gap-boxshadow
+{
+    border:1px solid #555;
+}*/
+.boxshadow {
+    /*background-color: #eed;    box-shadow: 0 0 1px rgba(0,0,0,0.6);    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.6); -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.6);    -o-box-shadow: 0 0 1px rgba(0,0,0,0.6); */
+}
+
+
+
+.mb-wrap {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+}
+
+    .mb-wrap p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mb-wrap blockquote {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .mb-wrap cite {
+        font-style: normal;
+    }
+
+
+
+.mb-style-5 {
+    width: 390px;
+}
+
+    .mb-style-5 blockquote {
+        text-align: center;
+        background: #333;
+        width: 350px;
+        height: 350px;
+        padding: 60px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 10px #333, inset 0 0 0 12px rgba(255,255,255,0.6), 80px 0 0 rgba(255,255,255,0.3), -80px 0 0 rgba(255,255,255,0.3), 50px 0 0 rgba(60,185,145,0.2), -50px 0 0 rgba(185,60,60,0.2);
+    }
+
+
+        .mb-style-5 blockquote p {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            padding-top: 25px;
+            text-transform: uppercase;
+            text-shadow: 0 0 1px #fff, 0 1px 1px #000;
+            font-family: 'Annie Use Your Telescope', cursive;
+        }
+
+            .mb-style-5 blockquote p span {
+                display: block;
+                position: relative;
+                padding-top: 40px;
+                margin-top: 40px;
+                border-top: 1px solid rgba(255,255,255,0.3);
+            }
+
+                .mb-style-5 blockquote p span:before {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: #ddd;
+                    content: "\275d";
+                    font-size: 40px;
+                    color: #333;
+                    top: 0px;
+                    left: 50%;
+                    margin: -25px 0 0 -25px;
+                    border-radius: 50%;
+                }
+
+    .mb-style-5 .mb-attribution {
+        text-align: center;
+        font-family: 'Annie Use Your Telescope', cursive;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .mb-style-5 cite a:hover {
+        color: #000;
+    }
+
+h2.sitename-hr {
+    overflow: hidden;
+    text-align: center;
+}
+
+h2.sitename:before,
+h2.sitename:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+h2.sitename:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+h2.sitename:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.about-part {
+    padding: 40px 20px;
+    background-color: #e5e5e5;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+    .about-part span {
+        font-family: Monotype Corsiva;
+        font-size: 30px;
+        border-bottom: 1px dotted;
+    }
+
+.products-homepage {
+    background-color: #808080;
+}
+
+.transbox {
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.products-homepage .heading {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Alegreya Sans',sans-serif;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+@media all and (max-width:800px) {
+    .products-homepage .heading {
+        font-size: 40px;
+    }
+}
+
+.products-homepage .heading span {
+    border-bottom: 1px dotted #555;
+}
+
+.products-homepage .main-content {
+    text-align: justify;
+}
+
+.products-homepage .content-heading {
+    font-size: 20px;
+    color: #f5f5f5;
+}
+
+@media all and (max-width:500px) {
+    .products-homepage .content-heading {
+        font-size: 12px;
+    }
+}
+
+.products-homepage .content-desc {
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+
+
+select.search {
+    border: 0px;
+    outline: none;
+    padding: 10px 0px;
+    background-color: transparent;
+    width: 30%;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.text-white {
+    color: #f5f5f5 !important;
+}
+
+.setPadding td, th {
+    padding: 5px 5px;
+}
+
+.removePadding td {
+    padding: 0px;
+}
+
+.alert-success {
+    border: 1px solid #009933;
+    border-radius: 3px;
+    color: #009933;
+    background-color: #E5FFE5;
+    padding: 7px 5px;
+}
+
+.alert-info {
+    color: #1CB3FF;
+    border: 1px solid #1CB3FF;
+    border-radius: 3px;
+    background-color: #E5F7FF;
+    padding: 7px 5px;
+}
+
+.alert-warning {
+    color: #dba800;
+    border: 1px solid #dba800;
+    border-radius: 3px;
+    background-color: #fff7df;
+    padding: 7px 5px;
+}
+
+.alert-error {
+    color: #FF471A;
+    border: 1px solid #FF471A;
+    border-radius: 3px;
+    background-color: #FFD6CC;
+    padding: 7px 5px;
+}
+
+.product-block {
+    background-color: #eee;
+    height: 150px;
+}
+
+    .product-block p {
+        border-bottom: 1px solid #333;
+    }
+
+
+
+
+
+===================================
+
+
+@media all and (min-width:500px) and (max-width:1000px) {
+    .catalogue-banner h3 {
+        font-size: 12px;
+    }
+}
+
+.products {
+    list-style-type: none;
+    text-align: center;
+}
+
+    .products li {
+        /* width:22%;*/
+        float: left;
+        margin-left: 20px;
+    }
+
+        .products li p {
+            padding: 7px;
+            background-color: #fff;
+            border: 1px outset #ccc;
+        }
+
+        .products li a {
+            color: #333;
+            font-size: 16px;
+            display: block;
+        }
+
+            .products li a.no-link {
+                cursor: text;
+            }
+
+            .products li a:not(.no-link):hover {
+                color: #ADBB2F;
+            }
+
+.prod-enquiry-icon {
+    margin: 0px 0px 0px 234px;
+    border: 1px solid #fff;
+    display: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.products li:hover .prod-enquiry-icon {
+    z-index: 10;
+    display: block;
+    position: absolute;
+}
+
+.prod-img-block {
+    width: 275px;
+    height: 210px;
+    position: relative;
+}
+
+    .prod-img-block img {
+        padding: 5px;
+        border: 0 none;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .prod-img-block:hover ~ .prod-desc-block {
+        display: block;
+        z-index: 10;
+        position: absolute;
+    }
+
+.prod-desc-block {
+    min-width: 275px;
+    width: auto;
+    max-width: 700px;
+    height: auto;
+    display: none;
+    text-align: justify;
+    background-color: #333 !important;
+    color: #f5f5f5;
+}
+
+.name-block {
+    width: 275px;
+    height: 55px;
+    overflow: hidden;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.category-sidebar ul li {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 5px;
+    display:table;
+    width:100%;
+}
+
+    .category-sidebar ul li a {
+        color: #f5f5f5;
+        display:table-cell;
+    }
+
+    .category-sidebar ul li img {
+        display:table-cell;
+        margin-bottom:-5px;
+    }
+
+@media all and (max-width:1000px) {
+    .category-sidebar {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+        .category-sidebar ul li {
+            display: inline-block;
+            padding: 5px;
+        }
+}
+
+@media all and (min-width:1000px) and (max-width:2000px) {
+    .category-sidebar {
+        border-right: 1px solid #f5f5f5;
+    }
+
+        .category-sidebar ul {
+            display: table-row;
+        }
+}
+
+.category-sidebar ul li:hover {
+    background-color:#000;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">INFINIX</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home">
+                    </span>&nbsp;HOME</a></li>
+        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>
+                        &nbsp;ABOUT US</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list-alt">
+                    </span>&nbsp;PRODUCT
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-columns">
+            <li><a href="product1.html">AIR CURTAINS</a></li>
+            <li><a href="product2.html">AIR FRESHNERS</a></li>
+            <li><a href="product3.html">CLEANING TOOLS AND EQUIPMENTS</a></li>
+            <li><a href="#">DISPLAY PRODUCTS AND SIGNAGES</a></li>
+            <li><a href="#">DISPOSABLES</a></li>
+            <li><a href="#">HAND DRYERS</a></li> 
+            <li><a href="#">HYGIENE STATION</a></li>
+            <li><a href="#">INSECT KILLERS</a></li>
+            <li><a href="#">MATINGS</a></li>
+            <li><a href="#">MULTI PURPOSE TROLLEY</a></li>
+            <li><a href="#">MULTI UTILITY PRODUCTS</a></li> 
+            <li><a href="#">PAPER NAPKIN DISPENSERS</a></li>
+            <li><a href="#">PLASTIC DUSTBINS</a></li>
+            <li><a href="#">SHOE CARE</a></li>
+            <li><a href="#">SOAP DISPENSERS</a></li>
+            <li><a href="#">STAINLESS STEEL DUSTBINS</a></li>
+            <li><a href="#">TRAFFIC AND SAFETY PRODUCTS</a></li>
+          </ul>
+        </li>
+        <li><a href="Enquiry.html"><span class="glyphicon glyphicon-comment">
+                    </span>&nbsp;ENQUIRY</a></li>
+        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope">
+                    </span>&nbsp;CONTACT US</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid">
+        
+    <div class="row row-padding text-white catalogue-banner">
+        <div class="col-md-12">
+            <center>
+                <h1 id="ctl00_ContentPlaceHolder2_ProdCat">CLEANING TOOLS AND EQUIPMENTS</h1>
+            </center>
+        </div>
+    </div>
+    <div class="row row-padding" style="background-color: #676767;">
+        <div class="col-md-2 text-white category-sidebar">
+            <h1>
+                Categories</h1>
+            <ul id="ctl00_ContentPlaceHolder2_ulCatList">
+             <ul id="ctl00_ContentPlaceHolder2_ulCatList">
+                   <li><a href='product1.html'>AIR CURTAINS</a></li>
+              <li><a href='product2.html'>AIR FRESHNERS</a></li>
+              <li><a href='product3.html'>CLEANING TOOLS AND EQUIPMENTS</a></li>
+              <li><a href='product5.html'>DISPLAY PRODUCTS AND SIGNAGES</a></li>
+              <li><a href='product6.html'>DISPOSABLES</a></li>
+              <li><a href='product7.html'>HAND DRYERS</a></li>
+              <li><a href='product8.html'>HYGIENE STATION</a></li>
+              <li><a href='product9.html'>INSECT KILLERS</a></li>
+              <li><a href='product10.html'>MATINGS</a></li>
+              <li><a href='product11.html'>MULTI PURPOSE TROLLEY</a></li>
+              <li><a href='product12.html'>MULTI UTILITY PRODUCTS</a></li>
+              <li><a href='product13.html'>PAPER NAPKIN DISPENSERS</a></li>
+              <li><a href='product14.html'>PLASTIC DUSTBINS</a></li>
+              <li><a href='product15.html'>SHOE CARE</a></li>
+              <li><a href='product16.html'>SOAP DISPENSERS</a></li>
+              <li><a href='product17.html'>STAINLESS STEEL DUSTBINS</a></li>
+              <li><a href='product18.html'>TRAFFIC AND SAFETY PRODUCTS</a></li></ul>
+        </div>
+         <div id="ctl00_ContentPlaceHolder2_divProducts" class="col-md-10">
+          <ul class='products'>
+            <li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=10'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img12.jpg' class='img-responsive' title='Spin Mop with Bucket' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Spin Mop with Bucket<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=11'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img13.jpg' class='img-responsive' title='Dust pan with Brush' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Dust pan with Brush<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=12'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img14.jpg' class='img-responsive' title='Caution Board' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Caution Board<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=13'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img15.jpg' class='img-responsive' title='3M Cleaning Products' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>3M Cleaning Products<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=14'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img16.jpg' class='img-responsive' title='Telescopic Rod with Attachment' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Telescopic Rod with Attachment<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=15'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img17.jpg' class='img-responsive' title='MOP Set' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>MOP Set<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=16'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='/C:\Users\Pratap\Desktop\img\img18.jpg' class='img-responsive' title='Floor Scrubbing Brush' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Floor Scrubbing Brush<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=17'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img19.jpg' class='img-responsive' title='Micro Fiber Brush' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Micro Fiber Brush<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=18'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src="C:\Users\Pratap\Desktop\img\img20.jpg" class='img-responsive' title='Fan/Cobweb/Combi Glass Cleaner' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Fan/Cobweb/Combi Glass Cleaner<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=19'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img21.jpg' class='img-responsive' title='Plastic Toilet Brush & Holder' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Plastic Toilet Brush & Holder<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=20'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img22.jpg' class='img-responsive' title='S/S Toilet Brush & Holder' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>S/S Toilet Brush & Holder<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=21'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img23.jpg' class='img-responsive' title='Caddy' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Caddy<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=22'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img24.jpg' class='img-responsive' title='MOP Wringer Trolley' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>MOP Wringer Trolley<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=23'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img25.jpg' class='img-responsive' title='MOP Wringer Trolley' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>MOP Wringer Trolley<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=24'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img26.jpg' class='img-responsive' title='MOP Wringer Trolley' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>MOP Wringer Trolley<br/></a></p></li><li><div class='prod-enquiry-icon'><a href='Enquiry.aspx?cid=16&pid=25'><img src='C:\Users\Pratap\Desktop\img\img10.jpg' title='Enquire about this product' /></a></div><p class='prod-img-block'><img src='C:\Users\Pratap\Desktop\img\img27.jpg' class='img-responsive' title='Wheel Barrow' onclick='showImage(this)'/></p><p class='name-block'><a class='no-link' href='#'>Wheel Barrow<br/></a></p></li></ul></div>
+    </div>
+</div>
+
+
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+                  <div class="col-lg-3 col-md-6 footer-info">
+            <h3>INFINIX</h3>
+            <p>To provide the community with the best hygiene solutions, most effective and cost efficient equipment that will help to serve your needs in a better way.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+               <li><i class="ion-ios-arrow-right"></i> <a href="project.html">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="about.html">About Us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Product</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="Enquiry.html">Enquiry</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+          
+            <p class="copyright text-muted">Copyright &copy; INFINIX  2019</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
